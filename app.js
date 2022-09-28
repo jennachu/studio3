@@ -30,10 +30,22 @@ const updatePage = async () => {
 
   // TODO: Use either `map` and/or `filter` to extract some data from the array of fruit objects
   // For example, find "name of all fruits whose sugar > 15",
+  
+  const filtArray =  fruitsArray.filter((fruit) => {
+    return fruit.id > 20;
+  })
+  // filtArray
+
+  const nameArray = fruitsArray.map(fruit => fruit.name);
+
 
   // TODO: Create a new HTML element to display your data
+  const newElement = document.createElement("p");
+  newElement.innerHTML = nameArray;
 
   // TODO: Append your new element to the page
+  const existingElement = document.getElementById("cs1300-gallery");
+  existingElement.append(newElement);
 
 }
 
